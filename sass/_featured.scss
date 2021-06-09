@@ -1,0 +1,19 @@
+.featured-block {
+  padding: $spacer;
+  border: 1px solid;
+  box-shadow: $box-shadow-sm;
+  border-radius: $border-radius-lg;
+  border-color: $gray-300;
+  text-align: center;
+  display: block;
+  position: relative;
+  > img {
+    @include img-fluid();
+    border-radius: $border-radius-lg;
+  }
+  > .featured-block-badges {
+    position: absolute;
+    top: - ($spacer / 2);
+    left: $spacer / 2;
+  }
+}
