@@ -36,5 +36,27 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // remove colors from theme
 $theme-colors: map-remove($theme-colors, "danger");
 
+// add classes for color pallette colors
+@each $color, $val in $colors {
+  .bg-#{$color} {
+    background-color: $val
+  }
+  .bg-#{$color}-light {
+    background-color: tint-color($val, 80%)
+  }
+  .bg-#{$color}-dark {
+    background-color: shade-color($val, 30%)
+  }
+  .text-#{$color} {
+    color: $val
+  }
+  .text-#{$color}-light {
+    color: tint-color($val, 80%)
+  }
+  .text-#{$color}-dark {
+    color: shade-color($val, 30%)
+  }
+}
+
 // import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import "../node_modules/bootstrap/scss/bootstrap";
