@@ -4,5 +4,10 @@ $enable-button-pointers: false;
 $enable-negative-margins: true;
 $enable-smooth-scroll: false;
 
+// theme color variables
+$primary: #ff3287;
+$secondary: #16be7e;
+$light: #fff9f1;
+
 // import bootstrap whole sass lib
 @import "../node_modules/bootstrap/scss/bootstrap";
