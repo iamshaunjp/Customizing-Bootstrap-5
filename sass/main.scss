@@ -1,3 +1,6 @@
+// load custom font from google fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 // import functions first (so you can use them in this file)
 @import "../node_modules/bootstrap/scss/functions";
 
@@ -13,6 +16,18 @@ $enable-smooth-scroll: false;
 $primary: #ff3287;
 $secondary: #16be7e;
 $light: #fff9f1;
+
+// font family
+$font-family-base: "Poppins";
+
+// font sizes
+$font-size-base: 1rem;
+$lead-font-size: $font-size-base * 1.5;
+
+// headings
+$headings-font-weight: 300;
+$headings-line-height: 1.5;
+$h1-font-size: $font-size-base * 2.75;
 
 // import variables and mixins files (so you can use them below)
 // any redefined vars above will be incorporated into the files (e.g. in maps)
@@ -57,6 +72,12 @@ $theme-colors: map-remove($theme-colors, "danger");
     color: shade-color($val, 30%)
   }
 }
+
+// add display heading
+$custom-display-font-sizes: (
+  7: 2rem,
+);
+$display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
 
 // import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import "../node_modules/bootstrap/scss/bootstrap";
