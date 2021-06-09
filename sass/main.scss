@@ -29,6 +29,13 @@ $headings-font-weight: 300;
 $headings-line-height: 1.5;
 $h1-font-size: $font-size-base * 2.75;
 
+// links
+$link-color: $secondary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+$link-shade-percentage: 30%;
+$link-hover-color: shift-color($link-color, -$link-shade-percentage);
+
 // import variables and mixins files (so you can use them below)
 // any redefined vars above will be incorporated into the files (e.g. in maps)
 @import "../node_modules/bootstrap/scss/variables";
