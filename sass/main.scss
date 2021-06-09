@@ -1,6 +1,8 @@
-// .custom {
-//   color: red;
-// }
+// global variables
+$enable-rounded: false;
+$enable-button-pointers: false;
+$enable-negative-margins: true;
+$enable-smooth-scroll: false;
 
 // import bootstrap whole sass lib
 @import "../node_modules/bootstrap/scss/bootstrap";
