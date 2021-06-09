@@ -45,7 +45,28 @@ $grid-breakpoints: (
   xl: 1100px,
   xxl: 1300px
 );
-// $grid-columns: 16;
+
+// spacers
+$spacer: 1.5rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 2,
+  5: $spacer * 4,
+);
+
+// borders
+// $border-width: 3px;
+$border-widths: (
+  1: 1px,
+  2: 3px,
+  3: 5px,
+  4: 7px,
+  5: 9px
+);
+$border-color: $primary;
 
 // import variables and mixins files (so you can use them below)
 // any redefined vars above will be incorporated into the files (e.g. in maps)
