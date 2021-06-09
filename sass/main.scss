@@ -20,10 +20,21 @@ $light: #fff9f1;
 @import "../node_modules/bootstrap/scss/mixins";
 
 // anything that depends on variables/mixins file defined below
+
 .btn-truncate {
   max-width: 100px;
   @include text-truncate;
 }
+
+// add colors to theme
+$custom-colors: (
+  "primary-light": #fff8fb,
+  "secondary-light": #f6fffb
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// remove colors from theme
+$theme-colors: map-remove($theme-colors, "danger");
 
 // import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import "../node_modules/bootstrap/scss/bootstrap";
