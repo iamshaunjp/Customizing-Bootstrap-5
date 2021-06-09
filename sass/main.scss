@@ -1,3 +1,8 @@
+// import functions first (so you can use them in this file)
+@import "../node_modules/bootstrap/scss/functions";
+
+// redefine variables not dependent on anything else
+
 // global variables
 $enable-rounded: false;
 $enable-button-pointers: false;
@@ -9,5 +14,16 @@ $primary: #ff3287;
 $secondary: #16be7e;
 $light: #fff9f1;
 
-// import bootstrap whole sass lib
+// import variables and mixins files (so you can use them below)
+// any redefined vars above will be incorporated into the files (e.g. in maps)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// anything that depends on variables/mixins file defined below
+.btn-truncate {
+  max-width: 100px;
+  @include text-truncate;
+}
+
+// import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import "../node_modules/bootstrap/scss/bootstrap";
