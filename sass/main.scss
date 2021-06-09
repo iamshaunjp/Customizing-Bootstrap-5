@@ -118,5 +118,41 @@ $custom-display-font-sizes: (
 );
 $display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
 
+// utility api - import utility file first
+@import "../node_modules/bootstrap/scss/utilities";
+
+// adding utilities
+$custom-utilities: (
+  "rotate": (
+    property: transform,
+    class: rotate,
+    values: (
+      0: rotate(0deg),
+      20: rotate(20deg),
+      40: rotate(40deg),
+      60: rotate(60deg),
+      80: rotate(80deg),
+      100: rotate(100deg),
+      120: rotate(120deg),
+      140: rotate(140deg),
+      160: rotate(160deg),
+      180: rotate(180deg),
+    )
+  ),
+  "opacity": (
+    property: opacity,
+    class: o,
+    state: hover,
+    values: (
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )
+  ),
+);
+$utilities: map-merge($utilities, $custom-utilities);
+
 // import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import "../node_modules/bootstrap/scss/bootstrap";
