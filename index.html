@@ -5,9 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cook Ninja</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 <body>
-  <h1>Hello Ninjas</h1>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+    <div class="container-lg">
+      <a class="navbar-brand fw-bold text-muted" href="#">NinjaCooks</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-links" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="nav-links">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Recipies</a>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="btn btn-outline-primary ms-2" href="#">Login / Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- breadcrumbs -->
+  <div class="container-lg mt-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Recipes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Aubergine Bites</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- image, title, cooking time, rating -->
+  <section class="py-5">
+    <div class="container-lg">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6">
+          <img class="img-fluid" src="/img/aub-dish.jpg" alt="recipe image">
+        </div>
+        <div class="col-md-6">
+          <p class="my-2">
+            <i class="bi bi-hand-thumbs-up-fill text-primary d-inline-block"></i>
+            <i class="bi bi-hand-thumbs-up-fill text-primary d-inline-block"></i>
+            <i class="bi bi-hand-thumbs-up-fill text-primary d-inline-block"></i>
+            <i class="bi bi-hand-thumbs-up-fill text-primary d-inline-block"></i>
+            <i class="bi bi-hand-thumbs-up text-primary d-inline-block"></i>
+          </p>
+          <h1>Sweet Aubergine Bites</h1>
+          <p class="lead">Enjoy this fresh veggie classic on a summer's day.</p>
+          <h4>
+            <span class="badge bg-light text-secondary">
+              <i class="bi bi-clock me-2 d-inline-block"></i> 20 mins
+            </span>
+          </h4>
+          <div class="my-2">
+            <p>Jump to: <a href="#method">Method</a> | <a href="#similar">Similar Recipes</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ingredients & method -->
+  <section class="bg-light py-5" id="method">
+    <div class="container-lg mb-5">
+      <div class="row g-5 justify-content-around">
+        <div class="col-md-4">
+          <div class="card bg-secondary text-white mb-3">
+            <h5 class="card-header">Ingredients</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-light text-secondary">2 Aubergines</li>
+              <li class="list-group-item bg-light text-secondary">1 Pomegranite</li>
+              <li class="list-group-item bg-light text-secondary">4 Garlic cloves</li>
+              <li class="list-group-item bg-light text-secondary">2 Red chilli peppers</li>
+              <li class="list-group-item bg-light text-secondary">Ground black pepper</li>
+              <li class="list-group-item bg-light text-secondary">4tbsp Olive oil</li>
+              <li class="list-group-item bg-light text-secondary">Handful of black pitted olives</li>
+              <li class="list-group-item bg-light text-secondary">Oregano</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h4>Method:</h4>
+          <ol class="text-muted">
+            <li class="my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non impedit nemo asperiores, dolores eligendi dignissimos quod, dolorem enim totam cum perspiciatis quas molestias animi laudantium accusamus eaque excepturi, in sapiente. Cumque ducimus ratione laborum explicabo quo dolorem tenetur asperiores maiores!</li>
+            <li class="my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non impedit nemo asperiores, dolores eligendi dignissimos quod, dolorem enim totam cum perspiciatis quas molestias animi laudantium accusamus eaque excepturi, in sapiente. Cumque ducimus ratione laborum explicabo quo dolorem tenetur asperiores maiores!</li>
+            <li class="my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non impedit nemo asperiores, dolores eligendi dignissimos quod, dolorem enim totam cum perspiciatis quas molestias animi laudantium accusamus eaque excepturi, in sapiente. Cumque ducimus ratione laborum explicabo quo dolorem tenetur asperiores maiores!</li>
+          </ol>
+          <div class="p-3 mt-4 rounded text-center border border-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum quisquam asperiores natus vero, iste veniam necessitatibus.</p>
+            <button class="btn btn-outline-primary">Edit Recipe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- similar dishes -->
+  <section class="d-none d-lg-block" id="similar">
+    <div class="container-md bg-white pt-4 mb-5">
+      <h4 class="text-center mb-4">Similar Recipes</h4>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-xl-3">
+          <div class="card">
+            <img src="/img/aub-dish.jpg" class="card-img-top" alt="recipe img">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary text-white">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-3">
+          <div class="card">
+            <img src="/img/aub-dish.jpg" class="card-img-top" alt="recipe img">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary text-white">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-3">
+          <div class="card">
+            <img src="/img/aub-dish.jpg" class="card-img-top" alt="recipe img">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary text-white">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="py-5 bg-light text-muted">
+    <div class="container-lg text-center">
+      <p>
+        Copyright 2021 NinjaCooks
+      </p>
+    </div>
+  </section>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
